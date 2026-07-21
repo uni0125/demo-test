@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üni 嗚泥 — demo</title>
+<style>
+  :root {
+    --ink: #2b2620;
+    --paper: #f6f2e8;
+    --moss: #5c6b4f;
+    --clay: #b6543a;
+    --line: #d8cfbd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Serif TC", "Songti TC", serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .badge {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--moss);
+    border: 1px solid var(--moss);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: center;
+    max-width: 720px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.15s forwards;
+  }
+  h1 span { color: var(--clay); }
+  p.sub {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    color: #6b6255;
+    margin-top: 18px;
+    max-width: 480px;
+    text-align: center;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.3s forwards;
+  }
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--line);
+    margin: 36px 0;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.45s forwards;
+  }
+  .pillars {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 560px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.6s forwards;
+  }
+  .pillar {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--ink);
+    background: #fffdf8;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .pillar:hover {
+    transform: translateY(-2px);
+    border-color: var(--clay);
+  }
+  footer {
+    margin-top: 48px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
+    color: #a89e8c;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 0.75s forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="badge">demo — vibe coding 流程示範</div>
+  <h1>一個科技業設計師的<br><span>創作與內在覺察</span>人生</h1>
+  <p class="sub">這是一個 demo 頁面,示範從對話生成到你自己動手發佈的完整手感。</p>
+  <div class="divider"></div>
+  <div class="pillars">
+    <div class="pillar">J-1 插畫IP視覺療癒</div>
+    <div class="pillar">J-2 成長寫作創作者修煉</div>
+    <div class="pillar">J-3 語言遠端咖啡廳遊牧</div>
+    <div class="pillar">J-4 排球動態生活動能</div>
+    <div class="pillar">J-5 設計師隱形美感</div>
+  </div>
+  <footer>Üni 嗚泥 · @uni_iscool</footer>
+</body>
+</html>
